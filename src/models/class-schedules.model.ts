@@ -1,7 +1,7 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class ClassSchedule extends Entity {
+export class ClassSchedules extends Entity {
   @property({
     type: 'string',
     id: true,
@@ -35,7 +35,7 @@ export class ClassSchedule extends Entity {
   classScheduleDays: string;
 
 
-  constructor(data?: Partial<ClassSchedule>) {
+  constructor(data?: Partial<ClassSchedules>) {
     super(data);
   }
 }
@@ -44,4 +44,4 @@ export interface ClassScheduleRelations {
   // describe navigational properties here
 }
 
-export type ClassScheduleWithRelations = ClassSchedule & ClassScheduleRelations;
+export type ClassScheduleWithRelations = ClassSchedules & ClassScheduleRelations;

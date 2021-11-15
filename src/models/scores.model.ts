@@ -1,47 +1,41 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class Subject extends Entity {
+export class Scores extends Entity {
   @property({
     type: 'string',
     id: true,
     generated: false,
     required: true,
   })
-  subjectId: string;
+  scoreId: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  programId: string;
+  uidStudent: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  subjectName: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  subjectDescription: string;
+  groupId: string;
 
   @property({
     type: 'number',
     required: true,
   })
-  subjectCredits: number;
+  score: number;
 
 
-  constructor(data?: Partial<Subject>) {
+  constructor(data?: Partial<Scores>) {
     super(data);
   }
 }
 
-export interface SubjectRelations {
+export interface ScoreRelations {
   // describe navigational properties here
 }
 
-export type SubjectWithRelations = Subject & SubjectRelations;
+export type ScoreWithRelations = Scores & ScoreRelations;
