@@ -55,6 +55,7 @@
     "@loopback/rest": "^10.1.0",
     "@loopback/rest-explorer": "^3.3.4",
     "@loopback/service-proxy": "^3.2.4",
+    "loopback4-connector-firestore": "^1.0.8",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
